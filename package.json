@@ -1,0 +1,49 @@
+{
+  "name": "@swarmai/meeting-pdf-reader",
+  "version": "1.0.0",
+  "description": "Extracts text from PDF artefacts shared in a Meeting Hub meeting.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "swarmai-package.yaml",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "clean": "rimraf dist"
+  },
+  "peerDependencies": {
+    "@swarmai/meeting-hub-sdk": ">=0.5.0"
+  },
+  "peerDependenciesMeta": {
+    "@swarmai/meeting-hub-sdk": {
+      "optional": false
+    }
+  },
+  "dependencies": {
+    "pdf-parse": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0"
+  },
+  "license": "MIT",
+  "author": "NorthPeak Malaysia <ops@northpeak.app>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/northpeakmalaysia/meeting-pdf-reader"
+  },
+  "homepage": "https://hub.northpeak.app",
+  "engines": {
+    "node": ">=22.0.0"
+  }
+}
